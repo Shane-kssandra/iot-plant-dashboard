@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic';
 "use client";
 
 import { useEffect, useState, useRef } from "react";
@@ -126,7 +125,6 @@ export default function Dashboard() {
       const fieldName = pump === "pump1" ? "pump1Percentage" : "pump2Percentage";
       const currentValue = pump === "pump1" ? pump1Percentage : pump2Percentage;
       
-      // Set the percentage (ESP32 will handle timing and auto-reset to 0)
       const newPercentage = currentValue === percentage ? 0 : percentage;
       
       if (pump === "pump1") {
@@ -336,13 +334,13 @@ export default function Dashboard() {
               <div className="text-center p-3 bg-white rounded-lg">
                 <p className="font-medium text-green-700">Pump 1 Status</p>
                 <p className={`text-lg font-bold ${pump1 ? "text-red-600" : "text-green-600"}`}>
-                  {pump1 ? "🔴 RUNNING (50%)" : "🟢 IDLE"}
+                  {pump1 ? "🔴 ON" : "🟢 OFF"}
                 </p>
               </div>
               <div className="text-center p-3 bg-white rounded-lg">
                 <p className="font-medium text-green-700">Pump 2 Status</p>
                 <p className={`text-lg font-bold ${pump2 ? "text-red-600" : "text-green-600"}`}>
-                  {pump2 ? "🔴 RUNNING (50%)" : "🟢 IDLE"}
+                  {pump2 ? "🔴 ON" : "🟢 OFF"}
                 </p>
               </div>
             </div>
