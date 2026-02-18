@@ -225,7 +225,7 @@ export default function Dashboard() {
           <h2 className="text-lg font-semibold text-blue-700 text-center">Threshold Settings</h2>
           <p className="text-sm text-blue-600 text-center">
             {mode === "AUTO" 
-              ? "In AUTO mode: Pumps run at 50% when soil is above threshold"
+              ? "In AUTO mode: Pumps run for 15 seconds when soil is above threshold"
               : "In MANUAL mode: Use percentage buttons to control pumps"}
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
